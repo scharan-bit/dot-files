@@ -115,3 +115,6 @@ alias activate_plagiarism="source ~/Projects/plagiarism-detection/venv/bin/activ
 if [[ -z "$TMUX" ]]; then
   exec tmux
 fi
+# this is my zshell configuration
+
+#
