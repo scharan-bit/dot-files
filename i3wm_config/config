@@ -289,7 +289,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+w exec --no-startup-id /usr/bin/opera
+bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 bindsym $mod+Shift+s exec flameshot gui
 # Power Profiles menu switcher (rofi)
@@ -323,7 +323,7 @@ set $ws10 "10"
 
 # bind program to workspace and focus to them on startup:
 assign [class="ghostty"] $ws1
-assign [class="(?i)opera"] $ws2
+assign [class="(?i)firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="obsidian"] $ws4
 assign [class="TelegramDesktop"] $ws5
@@ -397,7 +397,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec_always --no-startup-id sleep 1 && feh --bg-fill /home/scharan/Wallpapers/sunset_gruv.png
+exec_always --no-startup-id sleep 1 && feh --bg-fill /home/scharan/Wallpapers/astronaut.png
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -431,7 +431,7 @@ exec --no-startup-id /usr/bin/dunst
 
 # Autostart apps as you like
 exec --no-startup-id sleep 2 && ghostty
-exec --no-startup-id sleep 7 && opera
+exec --no-startup-id sleep 7 && firefox
 exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id sleep 4 && obsidian
 
@@ -483,24 +483,40 @@ for_window [class="urxvt"] border pixel 1
 ######################################
 
 # Define colors variables:
-set $darkbluetrans	#08052be6
-set $darkblue		#08052b
-set $lightblue		#5294e2
-set $urgentred		#e53935
-set $white		#fbf1c7
-set $black		#000000
-set $purple		#e345ff
-set $darkgrey		#1d2021
-set $grey		#b0b5bd
-set $mediumgrey		#8b8b8b
-set $yellowbrown	#e1b700
+# Catppuccin Mocha palette
+set $base           #1e1e2e
+set $mantle         #181825
+set $crust          #11111b
+set $text           #cdd6f4
+set $subtext0       #a6adc8
+set $subtext1       #bac2de
+set $surface0       #313244
+set $surface1       #45475a
+set $surface2       #585b70
+set $overlay0       #6c7086
+set $overlay1       #7f849c
+set $overlay2       #9399b2
+set $blue           #89b4fa
+set $lavender       #b4befe
+set $sapphire       #74c7ec
+set $sky            #89dceb
+set $teal           #94e2d5
+set $green          #a6e3a1
+set $yellow         #f9e2af
+set $peach          #fab387
+set $maroon         #eba0ac
+set $red            #f38ba8
+set $mauve          #cba6f7
+set $pink           #f5c2e7
+set $flamingo       #f2cdcd
+set $rosewater      #f5e0dc
 
 # define colors for windows:
-#class		        	border		bground		text		indicator	child_border
-client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
-client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
-client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
-client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
+#class               border      bground     text        indicator   child_border
+client.focused       $lavender   $base       $text       $mauve      $lavender
+client.unfocused     $surface1   $base       $subtext0   $surface2   $surface1
+client.focused_inactive $surface1  $base       $subtext0   $surface2   $surface1
+client.urgent        $red        $red        $text       $red        $red
 
 ############################################
 # bar settings (input comes from i3blocks) #
@@ -520,19 +536,19 @@ bar {
 
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
-# “[n][:][NAME]” will display only the name.
+# "[n][:][NAME]" will display only the name.
 strip_workspace_numbers yes
 ##strip_workspace_name no
 
 		    colors {
-		    separator          $purple
-		    background         $darkgrey
-		    statusline         $white
+		    separator          $mauve
+		    background         $base
+		    statusline         $text
 #                          		border 		        bg		txt		indicator
-		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
-		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
-		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
+		focused_workspace	$lavender         $lavender	$base		$mauve
+		active_workspace	$blue             $surface1	$text		$mauve
+		inactive_workspace	$surface1         $base   	$subtext0	$mauve
+		urgent_workspace	$red              $red		$text		$mauve
 	}
 }
 
@@ -551,19 +567,19 @@ strip_workspace_numbers yes
 #
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
-# “[n][:][NAME]” will display only the name.
+# "[n][:][NAME]" will display only the name.
 #strip_workspace_numbers yes
 ##strip_workspace_name no
 #
 #	colors {
-#		separator          $purple
-#		background         $darkbluetrans
-#        	statusline         $white
+#		separator          $mauve
+#		background         $base
+#        	statusline         $text
 #					border		bg		txt		indicator
-#		focused_workspace	$lighterblue	$lighterblue	$darkblue	$purple
-#		active_workspace	$lightdblue	$lightdblue	$darkblue	$purple
-#		inactive_workspace	$darkblue	$darkblue	$lightdblue	$purple
-#		urgent_workspace	$urgentred	$urgentred	$white		$purple
+#		focused_workspace	$lavender	$lavender	$base		$mauve
+#		active_workspace	$blue   	$surface1	$text   	$mauve
+#		inactive_workspace	$surface1	$base   	$subtext0	$mauve
+#		urgent_workspace	$red    	$red		$text	   	$mauve
 #	}
 #}
 
@@ -592,3 +608,4 @@ bindsym $mod+t exec --no-startup-id rofi -show window \
 #exec --no-startup-id greenclip daemon>/dev/null
 #bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
 #		-config ~/.config/rofi/rofidmenu.rasi
+exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
