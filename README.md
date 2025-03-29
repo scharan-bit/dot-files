@@ -268,9 +268,7 @@
 
 # FONT 
 I mainly rotate between these four fonts :-
-1. JetBrainsMono Nerd Font
-2. FiraCode Nerd Font
-3. Fantasque Sans Mono
-4. Source Code Pro
-
-
+1. [JetBrainsMono Nerd Font](https://www.jetbrains.com/lp/mono/)
+2. [FiraCode Nerd Font](https://www.programmingfonts.org/#firacode)
+3. [Fantasque Sans Mono](https://www.programmingfonts.org/#fantasque-sans)
+4. [Victor Mono Medium](https://rubjo.github.io/victor-mono/)
