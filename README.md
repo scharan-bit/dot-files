@@ -1,3 +1,12 @@
+# i3WM Preview
+![final_previewpng](https://github.com/user-attachments/assets/a0762622-ca7a-4bbe-b15d-059f860626d5)
+
+1. **Colorscheme**: [catppuccin-mocha](https://catppuccin.com/)
+2. **Font**: [Victor Mono Medium](https://rubjo.github.io/victor-mono/)
+3. **Terminal**: [Ghostty](https://ghostty.org/)
+4. **OS**: [Arch Linux](https://archlinux.org)
+5. [**Wallpaper**](https://github.com/orangci/walls-catppuccin-mocha/blob/master/astronaut.png)
+
 # VIM 
 ![vim_gruvbox_hybrid](https://github.com/user-attachments/assets/77dbd194-181e-4bbb-8f21-92cdae042097)
 
@@ -272,3 +281,5 @@ I mainly rotate between these four fonts :-
 2. [FiraCode Nerd Font](https://www.programmingfonts.org/#firacode)
 3. [Fantasque Sans Mono](https://www.programmingfonts.org/#fantasque-sans)
 4. [Victor Mono Medium](https://rubjo.github.io/victor-mono/)
+
+# i3WM
