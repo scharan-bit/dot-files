@@ -7,7 +7,6 @@ export ZSH="$HOME/.oh-my-zsh"
  COMPLETION_WAITING_DOTS="true"
  HIST_STAMPS="mm/dd/yyyy"
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 #for pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -22,4 +21,5 @@ alias activate_plagiarism="source ~/Projects/plagiarism-detection/venv/bin/activ
 #fi
 eval "$(starship init zsh)"
 
+# For default terminal
 export TERMINAL=kitty
