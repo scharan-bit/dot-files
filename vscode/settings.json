@@ -1,0 +1,28 @@
+{
+    "editor.fontSize": 22,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font','Fantasque Sans Mono'",
+    "workbench.colorTheme": "Tsoding Emacs Gruber Darkest",
+    "editor.cursorStyle": "underline",
+    "editor.lineNumbers": "relative",
+    "files.autoSave":"afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.wordWrap": "on",
+    "editor.fontLigatures": true,
+    "editor.detectIndentation": true,
+    "editor.minimap.enabled": false,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "markdown.preview.openMarkdownLinks": "inPreview",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.suggestSelection": "first",
+    "editor.parameterHints.enabled": true,
+    //Terminal related config
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontFamily": "'JetBrainsMono', 'Fantasque Sans Mono'",  // Same as editor for consistency
+    "terminal.integrated.scrollback": 10000  // Increase scrollback if needed
+
+
+}
