@@ -1,16 +1,25 @@
 export ZSH="$HOME/.oh-my-zsh"
-#ZSH_THEME="xiong-chiamiov-plus"
-CASE_SENSITIVE="true"
-HYPHEN_INSENSITIVE="true"
-zstyle ':omz:update' frequency 13
-DISABLE_MAGIC_FUNCTIONS="true"
-ENABLE_CORRECTION="true"
+ CASE_SENSITIVE="true"
+ HYPHEN_INSENSITIVE="true"
+ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+ zstyle ':omz:update' frequency 13
+ DISABLE_MAGIC_FUNCTIONS="true"
+ COMPLETION_WAITING_DOTS="true"
+ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
-export EMACSDIR="$HOME/.config/emacs"
-eval "$(starship init zsh)"
+#for pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+export PATH="$HOME/.pyenv/shims:$PATH"
+# for plagiarism detection project.
+alias activate_plagiarism="source ~/Projects/plagiarism-detection/venv/bin/activate"
 # Automatically start tmux if not already inside a session
 #if [[ -z "$TMUX" ]]; then
 #  exec tmux
 #fi
-# ~/.zshrc
+eval "$(starship init zsh)"
+
+export TERMINAL=kitty
