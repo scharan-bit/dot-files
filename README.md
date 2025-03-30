@@ -1,5 +1,6 @@
 # i3WM Preview
-![final_previewpng](https://github.com/user-attachments/assets/a0762622-ca7a-4bbe-b15d-059f860626d5)
+![final_profile](https://github.com/user-attachments/assets/624e1827-ee8c-4713-ac49-fd66c94070b5)
+
 
 1. **Colorscheme**: [catppuccin-mocha](https://catppuccin.com/)
 2. **Font**: [Victor Mono Medium](https://rubjo.github.io/victor-mono/)
@@ -274,12 +275,9 @@
 ## Email
 - Optional mu4e email client integration
 
-
 # FONT 
 I mainly rotate between these four fonts :-
 1. [JetBrainsMono Nerd Font](https://www.jetbrains.com/lp/mono/)
 2. [FiraCode Nerd Font](https://www.programmingfonts.org/#firacode)
 3. [Fantasque Sans Mono](https://www.programmingfonts.org/#fantasque-sans)
 4. [Victor Mono Medium](https://rubjo.github.io/victor-mono/)
-
-# i3WM
