@@ -254,7 +254,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
-exec_always --no-startup-id sleep 1 && feh --bg-fill /home/scharan/Wallpapers/aesthetic.jpg
+exec_always --no-startup-id sleep 1 && feh --bg-fill /home/scharan/Wallpapers/rosepine_astronaut.png
 
 # set powersavings for display:
 exec --no-startup-id xset s 0 0
@@ -326,10 +326,10 @@ client.background        $base
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango: FiraCode Nerd Font Medium 10
+		font pango: FiraCode Nerd Font Medium 12
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	    	position top
-	    	#i3bar_command i3bar --transparency
+	    #	i3bar_command i3bar --transparency
 		    tray_padding 0
 
 # When strip_workspace_numbers is set to yes,
