@@ -9,55 +9,52 @@ configuration {
     sidebar-mode:        false;
 }
 
-/* Rosé Pine Theme Colors */
+/* Dracula Theme Colors */
 * {
-    base:           #191724;
-    surface:        #1f1d2e;
-    overlay:        #26233a;
-    muted:          #6e6a86;
-    subtle:         #908caa;
-    text:           #e0def4;
-    love:           #eb6f92;
-    gold:           #f6c177;
-    rose:           #ebbcba;
-    pine:           #31748f;
-    foam:           #9ccfd8;
-    iris:           #c4a7e7;
-    highlightlow:   #21202e;
-    highlightmed:   #403d52;
-    highlighthigh:  #524f67;
+    background:         #282a36;
+    current-line:       #44475a;
+    selection:          #44475a;
+    foreground:         #f8f8f2;
+    comment:            #6272a4;
+    cyan:               #8be9fd;
+    green:              #50fa7b;
+    orange:             #ffb86c;
+    pink:               #ff79c6;
+    purple:             #bd93f9;
+    red:                #ff5555;
+    yellow:             #f1fa8c;
     
-    /* Standard colors */
-    background:                  @base;
-    background-alt:              @surface;
-    foreground:                  @text;
-    border:                      @rose;
-    border-alt:                  @love;
-    selected:                    @overlay;
-    urgent:                      @love;
+    /* Standard colors for Rofi */
+    background-color:             @background;
+    background-alt:               @current-line;
+    text-color:                   @foreground;
+    border:                       @purple;
+    border-alt:                   @pink;
+    selected:                     @selection;
+    urgent:                       @red;
     
-    normal-background:           @background;
-    normal-foreground:           @foreground;
-    selected-normal-background:  @selected;
-    selected-normal-foreground:  @rose;
-    alternate-normal-background: @background-alt;
-    alternate-normal-foreground: @foreground;
+    normal-background:            @background;
+    normal-foreground:            @foreground;
+    selected-normal-background:   @selection;
+    selected-normal-foreground:   @purple;
+    alternate-normal-background:  @background-alt;
+    alternate-normal-foreground:  @foreground;
     
-    urgent-background:           @urgent;
-    urgent-foreground:           @background;
-    selected-urgent-background:  @urgent;
-    selected-urgent-foreground:  @background;
-    alternate-urgent-background: @urgent;
-    alternate-urgent-foreground: @background;
+    urgent-background:            @urgent;
+    urgent-foreground:            @background;
+    selected-urgent-background:   @urgent;
+    selected-urgent-foreground:   @background;
+    alternate-urgent-background:  @urgent;
+    alternate-urgent-foreground:  @background;
     
-    active-background:           @pine;
-    active-foreground:           @background;
-    selected-active-background:  @foam;
-    selected-active-foreground:  @background;
-    alternate-active-background: @pine;
-    alternate-active-foreground: @background;
+    active-background:            @green;
+    active-foreground:            @background;
+    selected-active-background:   @cyan;
+    selected-active-foreground:   @background;
+    alternate-active-background:  @green;
+    alternate-active-foreground:  @background;
     
-    separatorcolor:              @border;
+    separatorcolor:               @border;
 }
 
 /* Insert theme modifications after this */
@@ -137,7 +134,7 @@ element.alternate.active {
 scrollbar {
     width:        4px;
     border:       0;
-    handle-color: @normal-foreground;
+    handle-color: @comment;
     handle-width: 8px;
     padding:      0;
 }

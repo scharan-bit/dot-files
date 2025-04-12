@@ -1,0 +1,50 @@
+
+# Dracula Colors
+set default-bg               "#282a36"
+set default-fg               "#f8f8f2"
+set statusbar-bg             "#44475a"
+set statusbar-fg             "#f8f8f2"
+set inputbar-bg              "#44475a"
+set inputbar-fg              "#f8f8f2"
+set notification-bg          "#44475a"
+set notification-fg          "#f8f8f2"
+set notification-error-bg    "#ff5555"
+set notification-error-fg    "#f8f8f2"
+set notification-warning-bg  "#f1fa8c"
+set notification-warning-fg  "#282a36"
+set highlight-color          "#bd93f9"
+set highlight-active-color   "#ff79c6"
+set completion-bg            "#44475a"
+set completion-fg            "#f8f8f2"
+set completion-group-bg      "#282a36"
+set completion-group-fg      "#6272a4"
+set completion-highlight-bg  "#6272a4"
+set completion-highlight-fg  "#f8f8f2"
+
+# Recolor PDF (Dracula-style page background)
+set recolor                  true
+set recolor-keephue          true
+set recolor-lightcolor       "#f8f8f2"
+set recolor-darkcolor        "#282a36"
+
+# Clipboard
+set selection-clipboard clipboard
+
+# Font (Status & Input bars)
+set font "JetBrainsMono NF Regular 14"
+
+# Zoom and scroll
+set zoom-step 1.1
+set scroll-step 40
+
+# UI padding & layout
+set statusbar-h-padding 10
+set statusbar-v-padding 2
+set show-hidden false
+
+# Enable Synctex (for LaTeX lovers)
+set synctex true
+
+# Map 'r' to recolor (toggle dark mode)
+map r recolor
+

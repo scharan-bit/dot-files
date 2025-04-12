@@ -18,146 +18,150 @@ $scala\
 $conda\
 $python\
 $time\n  \
-[󱞪](fg:iris) \
+[󱞪](fg:purple) \
 """
 
-palette = "rose-pine"
+palette = "dracula"
 
-[palettes.rose-pine]
-overlay = '#26233a'
-love = '#eb6f92'
-gold = '#f6c177'
-rose = '#ebbcba'
-pine = '#31748f'
-foam = '#9ccfd8'
-iris = '#c4a7e7'
+[palettes.dracula]
+background = '#282a36'
+current_line = '#44475a'
+foreground = '#f8f8f2'
+comment = '#6272a4'
+cyan = '#8be9fd'
+green = '#50fa7b'
+orange = '#ffb86c'
+pink = '#ff79c6'
+purple = '#bd93f9'
+red = '#ff5555'
+yellow = '#f1fa8c'
 
 [directory]
-format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
-style = "bg:overlay fg:pine"
+format = "[](fg:current_line)[ $path ]($style)[](fg:current_line) "
+style = "bg:current_line fg:cyan"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
 Documents = "󰈙"
-Downloads = " "
-Music = " "
-Pictures = " "
+Downloads = " "
+Music = " "
+Pictures = " "
 
 [fill]
-style = "fg:overlay"
+style = "fg:current_line"
 symbol = " "
 
 [git_branch]
-format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay) "
-style = "bg:overlay fg:foam"
-symbol = ""
+format = "[](fg:current_line)[ $symbol $branch ]($style)[](fg:current_line) "
+style = "bg:current_line fg:purple"
+symbol = ""
 
 [git_status]
 disabled = false
-style = "bg:overlay fg:love"
-format = '[](fg:overlay)([$all_status$ahead_behind]($style))[](fg:overlay) '
-up_to_date = '[ ✓ ](bg:overlay fg:iris)'
-untracked = '[?\($count\)](bg:overlay fg:gold)'
-stashed = '[\$](bg:overlay fg:iris)'
-modified = '[!\($count\)](bg:overlay fg:gold)'
-renamed = '[»\($count\)](bg:overlay fg:iris)'
+style = "bg:current_line fg:red"
+format = '[](fg:current_line)([$all_status$ahead_behind]($style))[](fg:current_line) '
+up_to_date = '[ ✓ ](bg:current_line fg:green)'
+untracked = '[?\($count\)](bg:current_line fg:orange)'
+stashed = '[\$](bg:current_line fg:purple)'
+modified = '[!\($count\)](bg:current_line fg:orange)'
+renamed = '[»\($count\)](bg:current_line fg:purple)'
 deleted = '[✘\($count\)](style)'
-staged = '[++\($count\)](bg:overlay fg:gold)'
-ahead = '[⇡\(${count}\)](bg:overlay fg:foam)'
-diverged = '⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foam)[⇣\(${behind_count}\)](bg:overlay fg:rose)[\]](bg:overlay fg:iris)'
-behind = '[⇣\(${count}\)](bg:overlay fg:rose)'
+staged = '[++\($count\)](bg:current_line fg:green)'
+ahead = '[⇡\(${count}\)](bg:current_line fg:cyan)'
+diverged = '⇕[\[](bg:current_line fg:purple)[⇡\(${ahead_count}\)](bg:current_line fg:cyan)[⇣\(${behind_count}\)](bg:current_line fg:pink)[\]](bg:current_line fg:purple)'
+behind = '[⇣\(${count}\)](bg:current_line fg:pink)'
 
 [time]
 disabled = false
-format = " [](fg:overlay)[ $time 󰴈 ]($style)[](fg:overlay)"
-style = "bg:overlay fg:rose"
+format = " [](fg:current_line)[ $time 󰴈 ]($style)[](fg:current_line)"
+style = "bg:current_line fg:yellow"
 time_format = "%I:%M%P"
 use_12hr = true
 
 [username]
 disabled = false
-format = "[](fg:overlay)[ 󰧱 $user ]($style)[](fg:overlay) "
+format = "[](fg:current_line)[ 󰧱 $user ]($style)[](fg:current_line) "
 show_always = true
-style_root = "bg:overlay fg:iris"
-style_user = "bg:overlay fg:iris"
+style_root = "bg:current_line fg:red"
+style_user = "bg:current_line fg:purple"
 
 # Languages
 
 [c]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:cyan"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [elixir]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:purple"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [elm]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:cyan"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [golang]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:cyan"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [haskell]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:purple"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [java]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:orange"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [julia]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:pink"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [nodejs]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:green"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
 symbol = "󰎙 "
 
 [nim]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:yellow"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
 symbol = "󰆥 "
 
 [rust]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:orange"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [scala]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:red"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = " "
+symbol = " "
 
 [python]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$version ]($style)[](fg:overlay)"
+style = "bg:current_line fg:green"
+format = " [](fg:current_line)[ $symbol$version ]($style)[](fg:current_line)"
 disabled = false
-symbol = ' '
+symbol = ' '
 
 [conda]
-style = "bg:overlay fg:pine"
-format = " [](fg:overlay)[ $symbol$environment ]($style)[](fg:overlay)"
+style = "bg:current_line fg:green"
+format = " [](fg:current_line)[ $symbol$environment ]($style)[](fg:current_line)"
 disabled = false
 symbol = '🅒 '
