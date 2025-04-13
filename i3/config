@@ -1,21 +1,17 @@
-font pango:JetBrainsMono Nerd Font 12
+font pango:JetBrainsMono NF Regular  12
 set $mod Mod4
 workspace_layout default
+
 #border indicator on windows:
 new_window pixel 3
-# thin borders
-# hide_edge_borders both
-# Set inner/outer gaps
+
 gaps inner 8
 gaps outer 3
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
 # switch/iterate between workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-
 # switch to workspace
 bindcode $mod+10    workspace  $ws1
 bindcode $mod+11    workspace  $ws2
@@ -27,31 +23,6 @@ bindcode $mod+16    workspace  $ws7
 bindcode $mod+17    workspace  $ws8
 bindcode $mod+18    workspace  $ws9
 bindcode $mod+19    workspace  $ws10
-
-# switch to workspace with numpad keys
-bindcode $mod+87 workspace $ws1
-bindcode $mod+88 workspace $ws2
-bindcode $mod+89 workspace $ws3
-bindcode $mod+83 workspace $ws4
-bindcode $mod+84 workspace $ws5
-bindcode $mod+85 workspace $ws6
-bindcode $mod+79 workspace $ws7
-bindcode $mod+80 workspace $ws8
-bindcode $mod+81 workspace $ws9
-bindcode $mod+90 workspace $ws10
-
-# switch to workspace with numlock numpad keys
-bindcode $mod+Mod2+87 workspace $ws1
-bindcode $mod+Mod2+88 workspace $ws2
-bindcode $mod+Mod2+89 workspace $ws3
-bindcode $mod+Mod2+83 workspace $ws4
-bindcode $mod+Mod2+84 workspace $ws5
-bindcode $mod+Mod2+85 workspace $ws6
-bindcode $mod+Mod2+79 workspace $ws7
-bindcode $mod+Mod2+80 workspace $ws8
-bindcode $mod+Mod2+81 workspace $ws9
-bindcode $mod+Mod2+90 workspace $ws10
-
 # move focused container to workspace
 bindcode $mod+Shift+10    move container to workspace  $ws1
 bindcode $mod+Shift+11    move container to workspace  $ws2
@@ -63,166 +34,98 @@ bindcode $mod+Shift+16    move container to workspace  $ws7
 bindcode $mod+Shift+17    move container to workspace  $ws8
 bindcode $mod+Shift+18    move container to workspace  $ws9
 bindcode $mod+Shift+19    move container to workspace  $ws10
-
-# move focused container to workspace with numpad keys
-bindcode $mod+Shift+Mod2+87 	move container to workspace  $ws1
-bindcode $mod+Shift+Mod2+88 	move container to workspace  $ws2
-bindcode $mod+Shift+Mod2+89 	move container to workspace  $ws3
-bindcode $mod+Shift+Mod2+83 	move container to workspace  $ws4
-bindcode $mod+Shift+Mod2+84 	move container to workspace  $ws5
-bindcode $mod+Shift+Mod2+85 	move container to workspace  $ws6
-bindcode $mod+Shift+Mod2+79 	move container to workspace  $ws7
-bindcode $mod+Shift+Mod2+80 	move container to workspace  $ws8
-bindcode $mod+Shift+Mod2+81 	move container to workspace  $ws9
-bindcode $mod+Shift+Mod2+90 	move container to workspace  $ws10
-
-# move focused container to workspace with numpad keys
-bindcode $mod+Shift+87 	 move container to workspace  $ws1
-bindcode $mod+Shift+88 	 move container to workspace  $ws2
-bindcode $mod+Shift+89 	 move container to workspace  $ws3
-bindcode $mod+Shift+83 	 move container to workspace  $ws4
-bindcode $mod+Shift+84 	 move container to workspace  $ws5
-bindcode $mod+Shift+85 	 move container to workspace  $ws6
-bindcode $mod+Shift+79 	 move container to workspace  $ws7
-bindcode $mod+Shift+80 	 move container to workspace  $ws8
-bindcode $mod+Shift+81 	 move container to workspace  $ws9
-bindcode $mod+Shift+90 	 move container to workspace  $ws10
-
 # resize window (you can also use the mouse for that):
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window's width.
-        # Pressing right will grow the window's width.
-        # Pressing up will shrink the window's height.
-        # Pressing down will grow the window's height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
+         # back to normal: Enter or Escape or $mod+r
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
-
 bindsym $mod+Return exec --no-startup-id kitty
-
 # kill focused window
 bindsym $mod+Shift+q kill
-
 # exit-menu
 bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
-
 # Lock the system
 # lock with a picture:
-bindsym $mod+l exec --no-startup-id i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
+bindsym $mod+l exec --no-startup-id i3lock -i  ~/.config/i3/gruvbox_room.png
 # lock by blurring the screen:
 #bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
 # lock in case after sleep
 exec --no-startup-id xss-lock -l ~/.config/i3/scripts/blur-lock
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
-
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
 bindsym $mod+Shift+r restart
-
 # keybinding in fancy rofi (automated):
 bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+b focus up
 bindsym $mod+o focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+b move up
 bindsym $mod+Shift+o move right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
 # split in horizontal orientation
 bindsym $mod+h split h
-
 # split in vertical orientation
 bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+g layout tabbed
 bindsym $mod+e layout toggle split
-
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
-
 # open new empty workspace
 bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/scripts/empty_workspace
-
 # Multimedia Keys
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ .05+ --limit 1.0 && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ .05- && pkill -RTMIN+1 i3blocks
-
 # gradular volume control
 bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
 bindsym $mod+XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
-
 # mute
 # use meta keys showing osc using dunst
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
 # mic mute toggle
 bindsym XF86AudioMicMute exec amixer sset Capture toggle
-
 # audio control
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause 
 # Above line will also work for pausing
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-
 # Redirect sound to headphones
 bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
-
 ## App shortcuts
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 bindsym $mod+Shift+s exec flameshot gui
-
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
-
 # Define names for default workspaces for which we configure key bindings later on.
 set $ws1 "1"
 set $ws2 "2"
@@ -237,54 +140,41 @@ set $ws10 "10"
 # bind program to workspace and focus to them on startup:
 assign [class="kitty"] $ws1
 assign [class="(?i)firefox"] $ws2
-assign [class="Thunar"] $ws3
-assign [class="obsidian"] $ws4
-
+assign [class="obsidian"] $ws3
+assign [class="Thunar"] $ws4
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=kitty] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=obsidian] focus
-
 #get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
 exec --no-startup-id dex --autostart --environment i3
-
 exec --no-startup-id ~/.screenlayout/monitor.sh
-
 # set wallpaper
-exec_always --no-startup-id sleep 1 && feh --bg-fill /home/scharan/Wallpapers/rosepine_astronaut.png
-
+exec_always --no-startup-id sleep 1 && feh --bg-fill /home/scharan/Wallpapers/draculay.png
 # set powersavings for display:
 exec --no-startup-id xset s 0 0
 # Desktop notifications
 exec --no-startup-id /usr/bin/dunst
-
 # autotiling script
 # `yay -S autotiling ;) (it is in AUR)
 exec_always --no-startup-id autotiling
-
 # Autostart apps as you like
 exec --no-startup-id sleep 2 && kitty
 exec --no-startup-id sleep 7 && firefox
 exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id sleep 4 && obsidian
-
 # start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
-
 # networkmanager-applet
 #exec --no-startup-id nm-applet
-
 # clipman-applet
 exec --no-startup-id xfce4-clipman
-
 # set floating (nontiling) for apps needing it
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-
 # set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
@@ -293,67 +183,61 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
-
 # set border of floating window
 for_window [class="urxvt"] border pixel 3
 
-# set primary Rosé Pine colorscheme colors
-set $base           #191724
-set $surface        #1f1d2e
-set $overlay        #26233a
-set $muted          #6e6a86
-set $subtle         #908caa
-set $text           #e0def4
-set $love           #eb6f92
-set $gold           #f6c177
-set $rose           #ebbcba
-set $pine           #31748f
-set $foam           #9ccfd8
-set $iris           #c4a7e7
-set $highlightlow   #21202e
-set $highlightmed   #403d52
-set $highlighthigh  #524f67
+# set Dracula theme colors
+set $background   #282a36
+set $currentline  #44475a
+set $selection    #44475a
+set $foreground   #f8f8f2
+set $comment      #6272a4
+set $cyan         #8be9fd
+set $green        #50fa7b
+set $orange       #ffb86c
+set $pink         #ff79c6
+set $purple       #bd93f9
+set $red          #ff5555
+set $yellow       #f1fa8c
 
 # Theming border and Windows
-# target                 title     bg    text   indicator  border
-client.focused           $rose     $base $text  $rose      $rose
-client.focused_inactive  $text     $base $text  $overlay   $surface
-client.unfocused         $text     $base $text  $overlay   $overlay
-client.urgent            $text     $base $text  $love      $love
-client.placeholder       $base     $base $text  $overlay   $overlay
-client.background        $base
+# target                 title     bg            text         indicator     border
+client.focused           $purple   $background   $foreground  $purple       $purple
+client.focused_inactive  $comment  $background   $foreground  $selection    $selection
+client.unfocused         $comment  $background   $foreground  $selection    $selection
+client.urgent            $red      $background   $foreground  $red          $red
+client.placeholder       $background $background $foreground  $selection    $selection
+client.background        $background
 
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango: FiraCode Nerd Font Medium 12
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position top
-	    #	i3bar_command i3bar --transparency
-		    tray_padding 0
-
-# When strip_workspace_numbers is set to yes,
-# any workspace that has a name of the form
-# "[n][:][NAME]" will display only the name.
-strip_workspace_numbers yes
-##strip_workspace_name no
-
-		    colors {
-		    separator          $love
-		    background         #1e1e2eD9
-		    statusline         $text
-#                          		border 		        bg		txt		indicator
-		focused_workspace	#1e1e2eD9          #1e1e2eD9	$rose		$love
-		active_workspace	#1e1e2eD9          #1e1e2eD9	$subtle		$love
-		inactive_workspace	#1e1e2eD9          #1e1e2eD9	$muted		$love
-		urgent_workspace	#1e1e2eD9          #1e1e2eD9	$love		$love
-	}
+    font pango: JetBrainsMono NF Regular  12
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position top
+    #i3bar_command i3bar --transparency
+    tray_padding 2
+    # When strip_workspace_numbers is set to yes,
+    # any workspace that has a name of the form
+    # "[n][:][NAME]" will display only the name.
+    strip_workspace_numbers yes
+    # strip_workspace_name no
+    height 24
+    
+    colors {
+        separator          $purple
+        background         #282a36DD
+        statusline         $foreground
+        #                  border          bg            text         indicator
+        focused_workspace  $purple         #282a36DD     $purple      $purple
+        active_workspace   #282a36DD      #282a36DD      $comment     $purple
+        inactive_workspace #282a36DD      #282a36DD      $comment     $purple
+        urgent_workspace   $red           #282a36DD      $red         $red
+    }
 }
 
-bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -font 'Hack 11' \
-		-config ~/.config/rofi/rofidmenu.rasi
-
+bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -font 'JetBrainsMono NF Regular  12' \
+    -config ~/.config/rofi/rofidmenu.rasi
 bindsym $mod+t exec --no-startup-id rofi -show window \
-		-config ~/.config/rofi/rofidmenu.rasi
-
+    -config ~/.config/rofi/rofidmenu.rasi
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
