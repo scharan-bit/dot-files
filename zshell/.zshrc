@@ -1,12 +1,13 @@
 export ZSH="$HOME/.oh-my-zsh"
-CASE_SENSITIVE="true"
-HYPHEN_INSENSITIVE="true"
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-zstyle ':omz:update' frequency 13
-DISABLE_MAGIC_FUNCTIONS="true"
-COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="mm/dd/yyyy"
+ CASE_SENSITIVE="true"
+ HYPHEN_INSENSITIVE="true"
+ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+ zstyle ':omz:update' frequency 13
+ DISABLE_MAGIC_FUNCTIONS="true"
+ COMPLETION_WAITING_DOTS="true"
+ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
 #for pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -20,5 +21,15 @@ alias activate_plagiarism="source ~/Projects/plagiarism-detection/venv/bin/activ
 #  exec tmux
 #fi
 eval "$(starship init zsh)"
-# For default terminal
+
 export TERMINAL=kitty
+
+
+export LANG=en_IN.utf8
+export LC_ALL=en_IN.utf8
+
+. "$HOME/.local/bin/env"
+
+#export PATH="$HOME/.config/emacs/bin:$PATH"
+
+export DOOMDIR="$HOME/.config/doom"
