@@ -1,0 +1,90 @@
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 14px;
+}
+
+window {
+    margin: 0px;
+    padding: 10px;
+    border: 3px solid #689d6a;
+    border-radius: 8px;
+    background-color: #282828;
+    animation: slideIn 0.2s ease-in-out both;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#input {
+    margin: 5px;
+    padding: 8px 12px;
+    border: 2px solid #504945;
+    border-radius: 6px;
+    background-color: #3c3836;
+    color: #ebdbb2;
+}
+
+#input:focus {
+    border-color: #8ec07c;
+    box-shadow: 0 0 5px #8ec07c;
+}
+
+#outer-box {
+    margin: 5px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 5px;
+    padding: 0px;
+    border: none;
+}
+
+#inner-box {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+#entry {
+    margin: 0px 0px 2px 0px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #504945;
+    color: #fbf1c7;
+    transition: all 0.1s ease-in-out;
+}
+
+#entry:hover {
+    background-color: #3c3836;
+    color: #fbf1c7;
+}
+
+#text {
+    margin: 0px;
+    padding: 4px 0px;
+    color: #ebdbb2;
+}
+
+#text:selected {
+    color: #fbf1c7;
+}
+
+#img {
+    margin: 0px 8px 0px 0px;
+    padding: 0px;
+}
