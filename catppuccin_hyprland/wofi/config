@@ -1,0 +1,17 @@
+# Wofi Configuration
+width=600
+height=380
+location=center
+orientation=vertical
+halign=fill
+valign=center
+prompt=Search...
+filter_rate=100
+allow_markup=true
+no_actions=true
+line_wrap=word
+content_halign=fill
+insensitive=true
+image_size=24
+hide_scroll=true
+matching=fuzzy
