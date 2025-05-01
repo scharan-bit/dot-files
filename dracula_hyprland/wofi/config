@@ -1,0 +1,32 @@
+# Wofi Configuration - Dracula Theme
+
+# Appearance
+width=35%
+height=45%
+location=center
+orientation=vertical
+halign=fill
+line_wrap=off
+dynamic_lines=true
+
+# Colors
+color=dracula
+
+# Behavior
+show=drun
+prompt=Search...
+filter_rate=100
+allow_markup=true
+no_actions=true
+insensitive=true
+sort_order=default
+gtk_dark=true
+image_size=24
+hide_scroll=true
+matching=contains
+
+# Key bindings
+key_forward=Tab
+key_backward=ISO_Left_Tab
+key_submit=Return
+key_exit=Escape

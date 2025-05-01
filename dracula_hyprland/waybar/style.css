@@ -1,0 +1,229 @@
+* {
+    border: none;
+    border-radius: 8px;
+    font-family: "JetbrainsMono Nerd Font";
+    font-size: 16px;
+    min-height: 20px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window {
+    margin-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+
+#workspaces {
+    margin-top: 6px;
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background: #282a36;
+    /* Dracula background */
+    transition: none;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    transition: none;
+    color: #f8f8f2;
+    /* Dracula foreground */
+    background: transparent;
+    border-radius: 2px;
+    padding: 0 8px;
+    margin: 4px 2px;
+}
+
+/* Full background block with Dracula purple color */
+#workspaces button.active {
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background-color: #bd93f9;
+    /* Dracula purple */
+    border-radius: 4px;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #ffb86c;
+    /* Dracula orange */
+    border-color: #ffb86c;
+    /* Dracula orange */
+}
+
+#network {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #ff5555;
+    /* Dracula red */
+}
+
+#wireplumber {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #f1fa8c;
+    /* Dracula yellow */
+}
+
+#battery {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #8be9fd;
+    /* Dracula cyan */
+}
+
+#battery.critical:not(.charging) {
+    background-color: #8be9fd;
+    /* Dracula cyan */
+    color: #282a36;
+    /* Dracula background (dark text) */
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ff5555;
+        /* Dracula red */
+        color: #f8f8f2;
+        /* Dracula foreground (light text) */
+    }
+}
+
+#backlight {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #ffb86c;
+    /* Dracula orange */
+}
+
+#clock {
+    margin-top: 6px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #50fa7b;
+    /* Dracula green */
+}
+
+#memory {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #f1fa8c;
+    /* Dracula yellow */
+}
+
+#cpu {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #bd93f9;
+    /* Dracula purple */
+}
+
+#custom-launcher {
+    font-size: 24px;
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    transition: none;
+    color: #ff79c6;
+    /* Dracula pink */
+    background: #44475a;
+    /* Dracula current line */
+}
+
+#custom-media {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #ff79c6;
+    /* Dracula pink */
+}
+
+#bluetooth {
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: #282a36;
+    /* Dracula background (dark text) */
+    background: #6272a4;
+    /* Dracula comment blue */
+}
