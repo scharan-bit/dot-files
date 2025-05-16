@@ -1,0 +1,193 @@
+# Alacritty Configuration File (TOML format)
+# For Alacritty version 0.13.0 and newer
+
+# Import the Gruvbox theme (optional, if you use the official theme repository)
+# import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+
+# Environment variables
+[env]
+TERM = "xterm-256color"
+
+# Window configuration
+[window]
+dimensions = { columns = 0, lines = 0 }
+padding = { x = 0, y = 0 }
+dynamic_padding = false
+decorations = "full"
+opacity = 1.0
+
+# Startup mode
+startup_mode = "Windowed"
+
+# Scrolling
+[scrolling]
+history = 10000
+multiplier = 3
+
+# Font configuration
+[font]
+size = 14.0
+
+[font.normal]
+family = "JetBrainsMono NFM"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono NFM"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono NFM SemiBold"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono NFM SemiBold"
+style = "SemiBold Italic"
+
+[font.offset]
+x = 0
+y = 0
+
+# Bell
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+
+# Cursor configuration
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 700
+unfocused_hollow = true
+thickness = 0.15
+
+
+# URL configuration
+[[hints.enabled]]
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\\u0000-\\u001F\\u007F-\\u009F<>\"\\s{-}\\^⟨⟩`]+"
+command = "xdg-open"
+post_processing = true
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+# Selection behavior
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+# Mouse
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+# Key bindings
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "Insert"
+mods = "Shift"
+action = "PasteSelection"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "F11"
+mods = "None"
+action = "ToggleFullscreen"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+action = "ClearLogNotice"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+chars = "\f"
+
+[[keyboard.bindings]]
+key = "PageUp"
+mods = "None"
+action = "ScrollPageUp"
+
+[[keyboard.bindings]]
+key = "PageDown"
+mods = "None"
+action = "ScrollPageDown"
+
+[[keyboard.bindings]]
+key = "Home"
+mods = "Shift"
+action = "ScrollToTop"
+
+[[keyboard.bindings]]
+key = "End"
+mods = "Shift"
+action = "ScrollToBottom"
+
+# Gruvbox Dark colors
+[colors.primary]
+background = "#282828"
+foreground = "#ebdbb2"
+
+[colors.cursor]
+text = "#282828"
+cursor = "#8ec07c" # Using your custom cursor color from kitty.conf
+
+[colors.selection]
+text = "#928374"
+background = "#ebdbb2"
+
+[colors.normal]
+black = "#665c54"
+red = "#cc241d"
+green = "#98971a"
+yellow = "#d79921"
+blue = "#458588"
+magenta = "#b16286"
+cyan = "#689d6a"
+white = "#a89984"
+
+[colors.bright]
+black = "#7c6f64"
+red = "#fb4934"
+green = "#b8bb26"
+yellow = "#fabd2f"
+blue = "#83a598"
+magenta = "#d3869b"
+cyan = "#8ec07c"
+white = "#bdae93"
