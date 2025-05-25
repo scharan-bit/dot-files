@@ -8,4 +8,4 @@ set recolor			        "true"
 set adjust-open			    "width"
 set statusbar-h-padding		10
 set statusbar-v-padding		10
-include zathura-gruvbox-dark
+include zathura-dracula
