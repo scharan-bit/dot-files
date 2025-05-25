@@ -1,0 +1,54 @@
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+set font "Cascadia Code NF 14"
+set render-loading true
+set recolor true
+set recolor-keephue true
+set adjust-open width
+
+# Tokyonight colorscheme
+# ==================================================================================================================
+# Notification Colors
+set notification-error-bg       rgba(247,118,142,1)   # Error (Red)
+set notification-error-fg       rgba(192,202,245,1)   # Foreground
+set notification-warning-bg     rgba(224,175,104,1)   # Warning (Gold)
+set notification-warning-fg     rgba(26,27,38,1)      # Background
+set notification-bg             rgba(26,27,38,1)      # Background
+set notification-fg             rgba(192,202,245,1)   # Foreground
+
+# Completion Menu
+set completion-bg               rgba(26,27,38,1)      # Background
+set completion-fg               rgba(86,95,137,1)     # Comment
+set completion-group-bg         rgba(26,27,38,1)
+set completion-group-fg         rgba(86,95,137,1)
+set completion-highlight-bg     rgba(51,70,124,1)     # Selection
+set completion-highlight-fg     rgba(192,202,245,1)
+
+# Index
+set index-bg                    rgba(26,27,38,1)
+set index-fg                    rgba(192,202,245,1)
+set index-active-bg             rgba(38,50,81,1)      # Slightly darker
+set index-active-fg             rgba(192,202,245,1)
+
+# Input/Status Bars
+set inputbar-bg                 rgba(26,27,38,1)
+set inputbar-fg                 rgba(192,202,245,1)
+set statusbar-bg                rgba(26,27,38,1)
+set statusbar-fg                rgba(192,202,245,1)
+
+# Highlight Colors
+set highlight-color             rgba(122,162,247,0.5) # Blue (Links)
+set highlight-active-color      rgba(247,118,142,0.5) # Red (Active)
+
+# Default Background/Foreground
+set default-bg                  rgba(26,27,38,0.9)
+set default-fg                  rgba(192,202,245,1)
+
+# Render Loading
+set render-loading-fg           rgba(26,27,38,1)
+set render-loading-bg           rgba(192,202,245,1)
+
+# Recolor Settings
+set recolor-lightcolor          rgba(26,27,38,1)
+set recolor-darkcolor           rgba(192,202,245,1)
+
