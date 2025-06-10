@@ -1,0 +1,7 @@
+#!/bin/bash
+
+alias sour='source ~/.zshrc'
+alias dots='cd ~/.dotfiles'
+alias afile='vim ~/.dotfiles/.aliases'
+alias install='sudo pacman -S'
+alias zshrc='vim ~/.zshrc'
