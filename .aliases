@@ -2,6 +2,8 @@
 
 alias sour='source ~/.zshrc'
 alias dots='cd ~/.dotfiles'
-alias afile='vim ~/.dotfiles/.aliases'
+alias afile='nvim ~/.dotfiles/.aliases'
 alias install='sudo pacman -S'
-alias zshrc='vim ~/.zshrc'
+alias zconf='nvim ~/.zshrc'
+alias hdots='cd ~/.config/hypr && ls'
+alias aconf='nvim ~/.config/alacritty/alacritty.toml'
