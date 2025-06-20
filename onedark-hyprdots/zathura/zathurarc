@@ -1,0 +1,65 @@
+# === One Dark Pro Inspired Colors ===
+
+# Notification Colors
+set notification-error-bg     "rgba(40, 44, 52, 1.0)"
+set notification-error-fg     "rgba(224, 108, 117, 1.0)"   # Red
+set notification-warning-bg   "rgba(40, 44, 52, 1.0)"
+set notification-warning-fg   "rgba(229, 192, 123, 1.0)"   # Yellow
+set notification-bg           "rgba(40, 44, 52, 1.0)"
+set notification-fg           "rgba(198, 120, 221, 1.0)"   # Purple
+
+# Completion Menu
+set completion-bg             "rgba(40, 44, 52, 1.0)"
+set completion-fg             "rgba(171, 178, 191, 1.0)"
+set completion-group-bg       "rgba(56, 60, 70, 1.0)"
+set completion-group-fg       "rgba(92, 99, 112, 1.0)"
+set completion-highlight-bg   "rgba(97, 175, 239, 1.0)"    # Blue
+set completion-highlight-fg   "rgba(40, 44, 52, 1.0)"
+
+# Index Pane
+set index-bg                  "rgba(40, 44, 52, 1.0)"
+set index-fg                  "rgba(209, 154, 102, 1.0)"   # Orange
+set index-active-bg           "rgba(97, 175, 239, 1.0)"
+set index-active-fg           "rgba(40, 44, 52, 1.0)"
+
+# Input Bar
+set inputbar-bg               "rgba(40, 44, 52, 1.0)"
+set inputbar-fg               "rgba(171, 178, 191, 1.0)"
+
+# Status Bar
+set statusbar-bg              "rgba(33, 37, 43, 1.0)"
+set statusbar-fg              "rgba(171, 178, 191, 1.0)"
+
+# Highlighting
+set highlight-color           "rgba(97, 175, 239, 0.4)"
+set highlight-active-color    "rgba(152, 195, 121, 0.4)"   # Green
+
+# Default Content
+set default-bg                "rgba(40, 44, 52, 1.0)"
+set default-fg                "rgba(171, 178, 191, 1.0)"
+
+# Loading Indicator
+set render-loading            true
+set render-loading-bg         "rgba(30, 34, 40, 1.0)"
+set render-loading-fg         "rgba(171, 178, 191, 1.0)"
+
+# Recoloring
+set recolor-lightcolor        "rgba(30, 34, 40, 1.0)"
+set recolor-darkcolor         "rgba(171, 178, 191, 1.0)"
+set recolor                   true
+
+# Misc
+set page-padding 10
+set font "JetBrainsMono NFM SemiBold 14"
+
+# === Key Mappings ===
+
+map H zoom in
+map L zoom out
+map r reload
+map I recolor
+map Q quit
+map w adjust_window width
+map f adjust_window best-fit
+set selection-clipboard clipboard
+
