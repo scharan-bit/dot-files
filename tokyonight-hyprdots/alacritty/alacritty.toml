@@ -1,0 +1,75 @@
+[window]
+dynamic_padding = true
+padding.x = 5
+padding.y = 5
+opacity = 1
+decorations = "none"
+
+[env]
+TERM = "xterm-256color"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#1a1b26"
+foreground = "#c0caf5"
+
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#c0caf5"
+
+[colors.normal]
+black   = "#15161E"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#a9b1d6"
+
+[colors.bright]
+black   = "#414868"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
+
+[font]
+size = 13
+offset.x = 0
+offset.y = 0
+
+glyph_offset.x = 0
+glyph_offset.y = 0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "SemiBold"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "ExtraBold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "SemiBold Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "ExtraBold Italic"
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 700
+unfocused_hollow = true
+thickness = 0.15
+

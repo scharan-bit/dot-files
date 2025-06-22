@@ -1,0 +1,283 @@
+# Zathura Configuration with Tokyo Night Dark Theme
+# Place this file at: ~/.config/zathura/zathurarc
+
+# ==========================================
+# TOKYO NIGHT DARK COLORSCHEME
+# ==========================================
+
+# Tokyo Night Dark Color Palette:
+# Background: #1a1b26 (main dark bg)
+# Surface: #24283b (slightly lighter)
+# Foreground: #c0caf5 (main text)
+# Comment: #565f89 (muted text)
+# Cyan: #7dcfff
+# Blue: #7aa2f7
+# Purple: #bb9af7
+# Green: #9ece6a
+# Yellow: #e0af68
+# Orange: #ff9e64
+# Red: #f7768e
+
+# Default background and foreground
+set default-bg                  "#1a1b26"
+set default-fg                  "#c0caf5"
+
+# Command line colors
+set inputbar-bg                 "#24283b"
+set inputbar-fg                 "#c0caf5"
+
+# Status bar colors
+set statusbar-bg                "#24283b"
+set statusbar-fg                "#c0caf5"
+
+# Completion menu colors
+set completion-bg               "#24283b"
+set completion-fg               "#c0caf5"
+set completion-group-bg         "#1a1b26"
+set completion-group-fg         "#7aa2f7"
+set completion-highlight-bg     "#7aa2f7"
+set completion-highlight-fg     "#1a1b26"
+
+# Notification colors
+set notification-bg             "#24283b"
+set notification-fg             "#c0caf5"
+set notification-error-bg       "#f7768e"
+set notification-error-fg       "#1a1b26"
+set notification-warning-bg     "#e0af68"
+set notification-warning-fg     "#1a1b26"
+
+# Index mode colors (table of contents)
+set index-bg                    "#1a1b26"
+set index-fg                    "#c0caf5"
+set index-active-bg             "#7aa2f7"
+set index-active-fg             "#1a1b26"
+
+# Highlight colors for search results
+set highlight-color             "#e0af68"
+set highlight-active-color      "#ff9e64"
+
+# Recolor mode colors (for PDFs with dark backgrounds)
+set recolor-lightcolor          "#1a1b26"
+set recolor-darkcolor           "#c0caf5"
+
+# ==========================================
+# GENERAL SETTINGS
+# ==========================================
+
+# Enable recolor mode by default (inverts colors for better dark mode reading)
+set recolor                     true
+
+# Keep original hue when recoloring
+set recolor-keephue             true
+
+# Enable reverse video mode
+set recolor-reverse-video       true
+
+# Clipboard integration
+set selection-clipboard         clipboard
+
+# Scroll step size
+set scroll-step                 50
+
+# Scroll wrapping
+set scroll-wrap                 false
+
+# Show filename in window title
+set window-title-basename       true
+set window-title-page           true
+
+# Database backend for bookmarks
+set database                    sqlite
+
+# Adjust window to fit page
+set adjust-open                 best-fit
+
+# Pages per row in multi-column mode
+set pages-per-row               1
+
+# First page column (for double-page layouts)
+set first-page-column           1:2
+
+# Zoom settings
+set zoom-min                    10
+set zoom-max                    1000
+set zoom-step                   10
+
+# Render quality
+set render-loading              true
+set render-loading-bg           "#1a1b26"
+set render-loading-fg           "#565f89"
+
+# Smooth scrolling
+set smooth-scroll               true
+
+# Incremental search
+set incremental-search          true
+
+# Abort clear search on scroll
+set abort-clear-search          true
+
+# Guioptions (remove scrollbars, etc.)
+set guioptions                  none
+
+# Font for interface elements
+set font                        "JetBrains Mono 11"
+
+# ==========================================
+# ENHANCED KEYBINDINGS
+# ==========================================
+
+# Navigation
+map j scroll down
+map k scroll up
+map h scroll left
+map l scroll right
+
+# Page navigation
+map <C-d> scroll half-down
+map <C-u> scroll half-up
+map <C-f> scroll full-down
+map <C-b> scroll full-up
+
+# Fast navigation
+map J navigate next
+map K navigate previous
+map gg goto top
+map G goto bottom
+
+# Zoom controls
+map + zoom in
+map = zoom in
+map - zoom out
+map 0 zoom original
+map z adjust_window best-fit
+map Z adjust_window width
+
+# Rotation
+map r rotate rotate_cw
+map R rotate rotate_ccw
+
+# View modes
+map d toggle_page_mode
+map <Tab> toggle_index
+map <F5> toggle_presentation
+map <F11> toggle_fullscreen
+
+# Search
+map / search forward
+map ? search backward
+map n search next
+map N search previous
+
+# Color mode toggles
+map <C-r> recolor
+map i recolor
+
+# Bookmarks
+map m mark_add
+map \' mark_evaluate
+
+# Copy to clipboard
+map y copy_link
+map Y copy_filepath
+
+# Print
+map <C-p> print
+
+# Reload document
+map <F5> reload
+
+# Quit
+map q quit
+map <C-q> quit
+
+# ==========================================
+# MOUSE BINDINGS
+# ==========================================
+
+# Zoom with mouse wheel + modifier
+map <C-Button4> zoom in
+map <C-Button5> zoom out
+
+# Horizontal scrolling with shift + wheel
+map <S-Button4> scroll left
+map <S-Button5> scroll right
+
+# ==========================================
+# PAGE SETTINGS
+# ==========================================
+
+# Link handling
+set link-zoom                   true
+set link-hadjust                true
+
+# Page padding
+set page-padding                1
+
+# Page cache size (in MB)
+set page-cache-size             15
+
+# Page right-to-left reading
+set page-right-to-left          false
+
+# Continuous page mode
+set continuous-hist-save        true
+
+# ==========================================
+# SEARCH SETTINGS
+# ==========================================
+
+# Case sensitivity in search
+set search-hadjust              true
+
+# ==========================================
+# SYNCTEX SETTINGS (for LaTeX integration)
+# ==========================================
+
+# Enable SyncTeX support
+set synctex                     true
+set synctex-editor-command      "nvim +%{line} %{input}"
+
+# ==========================================
+# SECURITY SETTINGS
+# ==========================================
+
+# Sandbox mode (recommended for security)
+set sandbox                     normal
+
+# ==========================================
+# ADDITIONAL APPEARANCE TWEAKS
+# ==========================================
+
+# Vertical center alignment
+set vertical-center             true
+
+# Show loading indicator
+set show-recent                 10
+set show-hidden                 false
+set show-directories            true
+
+# File browser settings
+set filemonitor                 inotify
+
+# ==========================================
+# CUSTOM MODES
+# ==========================================
+
+# Presentation mode settings
+map [presentation] q quit
+map [presentation] <Escape> abort
+map [presentation] <F5> toggle_presentation
+
+# Fullscreen mode settings  
+map [fullscreen] q quit
+map [fullscreen] <F11> toggle_fullscreen
+
+# Index mode settings
+map [index] q toggle_index
+map [index] <Escape> toggle_index
+map [index] j down
+map [index] k up
+map [index] l expand
+map [index] h collapse
+map [index] <Return> navigate_index

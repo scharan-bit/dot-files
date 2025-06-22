@@ -1,0 +1,125 @@
+* {
+    dark:          #282c34;
+    red:           #e06c75;
+    red-alt:       #be5046;
+    orange:        #d19a66;
+    yellow:        #e5c07b;     
+    blue:          #cba6f7;
+    green:         #98c379;
+    aqua:          #94e2d5;
+    cream:         #abb2bf;
+    grey:          #5c6370;
+    dark-grey:     #21252b;
+    transparent:   #00000000;
+    highlight:     underline bold #be5046;
+
+    padding:       0;
+    margin:        0;
+    border:        0;
+    border-radius: 0;
+    spacing:       0;
+    vertical-align: 0.5;
+
+    text-color:         @cream;
+    border-color:       @blue;
+    background-color:   @transparent;
+
+    font: "JetBrainsMono NFM SemiBold 14";
+}
+
+configuration {
+    display-drun: " Apps ";
+    display-run: " Cmd: ";
+    display-window: " Win : ";
+}
+
+window {
+    width: 25%;
+    location: center;
+    background-color: @dark-grey;
+    orientaion: horizontal;
+}
+
+mainbox {
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    margin: 8px 8px 3px 8px;
+    background-color: @blue;
+    children: [prompt, entry];
+}
+
+prompt {
+    padding: 5px;
+    margin: 2px;
+    background-color: @dark-grey;
+    text-color: @aqua;
+    font: "JetBrainsMono NFM SemiBold 15";
+}
+
+entry {
+    padding: 5px;
+    margin: 2px;
+    border-color: @grey;
+    background-color: @dark-grey;
+    text-color: @red;
+    font: "JetBrainsMono NFM SemiBold 15";
+}
+
+listview {
+    lines: 10;
+    padding: 8px;
+    border: 2px;
+    margin: 8px;
+    background-color: @dark-grey;
+    children: [element];
+}
+
+element {
+    padding: 2px;
+}
+
+element-text {
+    size: 1em;
+    padding: 4px;
+    margin: 0px;
+    text-color: inherit;
+}
+
+element-icon {
+    padding: 4px;
+    margin: 1px;
+    size: 1em;
+}
+
+element selected {
+    background-color: @blue;
+    text-color: @dark;
+}
+
+element selected active {
+    background-color: @red-alt;
+}
+
+message {
+    expand: true;
+    background-color: @dark-grey;
+    children: [textbox];
+}
+
+textbox {
+    expand: true;
+    padding: 3px;
+    background-color: @red-alt;
+    text-color: @dark-grey;
+}
+
+error-message {
+    expand: true;
+    border: 2px;
+    padding: 5px;
+    background-color: @dark-grey;
+    text-color: @dark;
+}
+

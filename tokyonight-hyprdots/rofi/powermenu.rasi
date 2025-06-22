@@ -1,0 +1,60 @@
+* {
+  // TokyoNight palette
+  background:     #1a1b26;
+  background-alt: #1f2335;
+  foreground:     #c0caf5;
+  selected:       #33467C;
+  active:         #7aa2f7;
+  urgent:         #f7768e;
+
+  font: "JetBrainsMono Nerd Font 13";
+  padding: 10px;
+  border: 2px;
+  border-color: #7aa2f7;
+}
+
+window {
+  location: center;
+  anchor: center;
+  width: 320px;
+  background-color: @background;
+  border: @border;
+  border-color: @border-color;
+}
+
+mainbox {
+  background-color: @background;
+  padding: 12px;
+  spacing: 12px;
+  children: [listview];
+}
+
+listview {
+  background-color: @background;
+  lines: 5;
+  spacing: 8px;
+  fixed-height: true;
+  scrollbar: false;
+}
+
+element {
+  background-color: #1f2335;
+  text-color: @foreground;
+  border-radius: 8px;
+  padding: 10px;
+  spacing: 8px;
+}
+
+element selected {
+  background-color: @selected;
+  text-color: @active;
+}
+
+element urgent {
+  text-color: @urgent;
+}
+
+element active {
+  text-color: @active;
+}
+

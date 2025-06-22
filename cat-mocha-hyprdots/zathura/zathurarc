@@ -1,0 +1,65 @@
+# === Catppuccin Mocha Colors ===
+
+# Notification Colors
+set notification-error-bg     "rgba(30, 30, 46, 1.0)"     # base
+set notification-error-fg     "rgba(243, 139, 168, 1.0)"   # red
+set notification-warning-bg   "rgba(30, 30, 46, 1.0)"     # base
+set notification-warning-fg   "rgba(249, 226, 175, 1.0)"   # yellow
+set notification-bg           "rgba(30, 30, 46, 1.0)"     # base
+set notification-fg           "rgba(203, 166, 247, 1.0)"   # mauve
+
+# Completion Menu
+set completion-bg             "rgba(30, 30, 46, 1.0)"     # base
+set completion-fg             "rgba(205, 214, 244, 1.0)"   # text
+set completion-group-bg       "rgba(24, 24, 37, 1.0)"     # crust
+set completion-group-fg       "rgba(108, 112, 134, 1.0)"   # overlay1
+set completion-highlight-bg   "rgba(137, 180, 250, 1.0)"   # blue
+set completion-highlight-fg   "rgba(30, 30, 46, 1.0)"     # base
+
+# Index Pane
+set index-bg                  "rgba(30, 30, 46, 1.0)"     # base
+set index-fg                  "rgba(250, 179, 135, 1.0)"   # peach
+set index-active-bg           "rgba(137, 180, 250, 1.0)"   # blue
+set index-active-fg           "rgba(30, 30, 46, 1.0)"     # base
+
+# Input Bar
+set inputbar-bg               "rgba(30, 30, 46, 1.0)"     # base
+set inputbar-fg               "rgba(205, 214, 244, 1.0)"   # text
+
+# Status Bar
+set statusbar-bg              "rgba(17, 17, 27, 1.0)"     # mantle
+set statusbar-fg              "rgba(205, 214, 244, 1.0)"   # text
+
+# Highlighting
+set highlight-color           "rgba(137, 180, 250, 0.4)"   # blue
+set highlight-active-color    "rgba(166, 227, 161, 0.4)"   # green
+
+# Default Content
+set default-bg                "rgba(30, 30, 46, 1.0)"     # base
+set default-fg                "rgba(205, 214, 244, 1.0)"   # text
+
+# Loading Indicator
+set render-loading            true
+set render-loading-bg         "rgba(17, 17, 27, 1.0)"     # mantle
+set render-loading-fg         "rgba(205, 214, 244, 1.0)"   # text
+
+# Recoloring
+set recolor-lightcolor        "rgba(17, 17, 27, 1.0)"     # mantle
+set recolor-darkcolor         "rgba(205, 214, 244, 1.0)"   # text
+set recolor                   true
+
+# Misc
+set page-padding 10
+set font "JetBrainsMono NFM SemiBold 14"
+
+# === Key Mappings ===
+
+map H zoom in
+map L zoom out
+map r reload
+map I recolor
+map Q quit
+map w adjust_window width
+map f adjust_window best-fit
+set selection-clipboard clipboard
+
